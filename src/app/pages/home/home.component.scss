@@ -1,0 +1,79 @@
+.planoDeFundo {
+  background-image: url(../../../assets/img/Background3.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: none;
+  width: 100%;
+  height: 919px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+
+  .opcoesCentrais {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    flex-direction: column;
+
+    .linhaTitulo {
+      width: 100%;
+      height: 20%;
+    }
+
+    .linha {
+      width: 100%;
+      height: 18%;
+
+      button {
+        width: 50%;
+        height: 80%;
+        border-top-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        background-image: url(../../../assets/img/BackgroundButton.jpg);
+        background-color: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        color: white;
+        font-size: 50px;
+        border: none;
+        position: relative;
+        overflow: hidden;
+        transition: 200ms linear;
+        box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+      }
+
+      button::before {
+        transition: 200ms linear;
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: #d538e05e;
+        z-index: 1;
+      }
+
+      button span {
+        position: relative;
+        z-index: 2;
+        font-weight: bold;
+      }
+
+      button:hover {
+        transform: scale(1.07);
+      }
+
+      button:hover::before {
+        transition: 200ms linear;
+        opacity: 0.7;
+        cursor: pointer;
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+.corpo {
+  width: 959px;
+  height: 918px;
+  background-image: url(../../../assets/img/images-removebg-preview.png);
+  background-position: center;
+  background-size: 100%;
+}
+
+.linha {
+  height: 50px;
+  background-color: #ff00004a;
+  position: absolute;
+  display: flex;
+
+  .coluna {
+    height: 100%;
+    border: 1px solid white;
+
+    .estouAqui {
+      width: 100%;
+      height: 100%;
+      background-image: url(../../../assets/img/PONTO_VERMELHO.png);
+      background-position: center;
+      background-size: 27px;
+      background-repeat: no-repeat;
+    }
+  }
+}
