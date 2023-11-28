@@ -1,0 +1,27 @@
+<div class="main_jogador">
+  <div class="menu_superior">
+    <div class="sair">
+      <div (click)="sair()" class="button_sair">
+        <p>Sair</p>
+      </div>
+    </div>
+    <div class="vidas">
+      <div *ngIf="vidas >= 1" class="vida"></div>
+      <div *ngIf="vidas >= 2"class="vida"></div>
+      <div *ngIf="vidas >= 3"class="vida"></div>
+      <div *ngIf="vidas >= 4" class="vida"></div>
+      <div *ngIf="vidas >= 5" class="vida"></div>
+    </div>
+    <div class="moeda">
+      <div class="img_moeda">
+        <img src="../../../assets/img/MOEDA_CQ.png" alt="" />
+      </div>
+      <div class="valor_moeda">
+        <p>{{pontuacao}}</p>
+      </div>
+    </div>
+    <div class="jogador">
+      <p>{{ savedUsername }}</p>
+    </div>
+  </div>
+</div>

@@ -1,15 +1,64 @@
+<app-opcoes *ngIf="isModalAberto" (fecharModal)="fecharModal()"></app-opcoes>
+
 <div class="planoDeFundo">
   <div class="opcoesCentrais">
     <div class="linhaTitulo">
+      <h2 class="animate-character" data-text="CodeQueste">CodeQuest</h2>
     </div>
     <div class="linha">
       <button (click)="jogar()"><span>JOGAR</span></button>
     </div>
     <div class="linha">
-      <button><span>OPÇÕES</span></button>
+      <button (click)="AbrirModal()"><span>OPÇÕES</span></button>
     </div>
     <div class="linha">
-      <button><span>SAIR</span></button>
+      <button (click)="creditos()"><span>SOBRE</span></button>
     </div>
   </div>
+
+  <div (click)="alternarAudio()" [ngClass]="buttonClass" class="button-som"></div>
 </div>
+
+<!-- <div class="home_page">
+
+    <div class="main">
+
+      <div class="area">-</div>
+      
+      <div class="titulo">
+        <div class="linhaTitulo">
+          <h2 class="animate-character" data-text="CodeQueste">CodeQuest</h2>
+        </div>
+      </div>
+
+      <div class="area">-</div>
+
+      <div class="opcoes">
+        <div class="menu">
+          <div class="topo_menu">
+            <h2>Menu</h2>
+          </div>
+          <div class="opcoes_menu">
+            <ul>
+              <li>> Jogar</li>
+              <li>> Opções</li>
+              <li>> Como Jogar?</li>
+              <li>> Sobre</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="player">
+        <div class="user_player">
+
+        </div>
+      </div>
+
+      <div class="som">
+        <div (click)="alternarAudio()" [ngClass]="buttonClass" class="button-som"></div>
+      </div>
+
+    </div>
+
+</div> -->

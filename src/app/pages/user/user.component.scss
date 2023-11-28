@@ -1,0 +1,109 @@
+@font-face {
+    font-family: DagestaN;
+    src: url('../../../assets/fonts/DagestaN/DagestaN\ .ttf');
+  }
+  
+
+  .main_user {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; // Garante que qualquer conteúdo adicional seja cortado para fora da exibição
+  
+    background-image: url('../../../assets/img/Background_sobrenos.png');
+    background-repeat: repeat-x; // Repetir apenas horizontalmente
+    animation: slideBackground 10s linear infinite; // Duração de 10 segundos e iteração infinita
+  
+  
+    @keyframes slideBackground {
+        0% {
+        background-position: 0 0;
+        }
+        100% {
+        background-position: 100% 0;
+        }
+    }
+
+    .user{
+        width: 20rem;
+        height: 20rem;
+        // background-color:aliceblue;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+
+        .titulo{
+
+            h3 {
+                margin: 0;
+                color: #fff;
+                font-size: 3rem;
+                font-family: 'DagestaN';
+                margin-bottom: 1rem;
+            }
+        }
+
+        .input_user{
+
+            input {
+                padding: 8px;
+                margin-top: 5px;
+                width: 15rem;
+                height: 2rem;
+                margin-bottom: 10px;
+                border: 1px solid #ccc;
+                border-radius: 4px;
+              }
+
+              input.vibrate {
+                border: 2px solid red;
+                animation: vibrateAnimation 0.3s ease; /* Defina a duração e a função de easing desejadas */
+
+                @keyframes vibrateAnimation {
+                    0% {
+                      transform: translateX(0);
+                    }
+                    25% {
+                      transform: translateX(-5px);
+                    }
+                    50% {
+                      transform: translateX(5px);
+                    }
+                    75% {
+                      transform: translateX(-5px);
+                    }
+                    100% {
+                      transform: translateX(0);
+                    }
+                  }
+              }
+        }
+
+        .entrar {
+            margin-top: 1rem;
+
+            .button_entrar {
+                background-color: #33146C;
+                padding: 0.5rem 2rem 0.5rem 2rem;
+                transition: transform .5s;
+                cursor: pointer;
+                box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+        
+                &:hover {
+                    transform: scale(1.1);
+                }
+        
+                p {
+                    margin: 0;
+                    font-size: 1.5rem;
+                    color: #fff;
+                    font-family: 'DagestaN';
+                }
+            }
+        }
+
+    }
+}

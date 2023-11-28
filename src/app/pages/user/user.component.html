@@ -1,0 +1,15 @@
+<div class="main_user">
+    <div class="user">
+        <div class="titulo">
+            <h3>Username</h3>
+        </div>
+        <div class="input_user">
+            <input type="text" id="username" name="username" [(ngModel)]="enteredUsername" required [class.vibrate]="vibrateUsernameInput">
+        </div>
+        <div class="entrar">
+            <div class="button_entrar" (click)="onEntrarClick()">
+                <p>Entrar</p>
+            </div>
+        </div>
+    </div>
+</div>

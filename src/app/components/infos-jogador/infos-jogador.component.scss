@@ -1,0 +1,100 @@
+@font-face {
+  font-family: DagestaN;
+  src: url("../../../assets/fonts/DagestaN/DagestaN\ .ttf");
+}
+
+.main_jogador {
+  width: 100%;
+  height: 9vh;
+  // background-color: aliceblue;
+  // opacity: 0.6;
+  position: fixed;
+
+  .menu_superior {
+    width: 100%;
+    height: 5rem;
+    // background-color: aquamarine;
+    display: flex;
+
+    .jogador {
+      width: 25%;
+      height: 5rem;
+      // background-color: bisque;
+      display: flex;
+      justify-content: right;
+      align-items: right;
+      padding-right: 40px;
+
+      p {
+        font-size: 1.5rem;
+        color: #fff;
+        font-family: "DagestaN";
+      }
+    }
+
+    .moeda {
+      width: 35%;
+      height: 5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .img_moeda {
+        img {
+          width: 3rem;
+        }
+      }
+
+      .valor_moeda {
+        p {
+          font-size: 1.5rem;
+          color: #fff;
+          font-family: "DagestaN";
+        }
+      }
+    }
+
+    .vidas {
+      width: 25%;
+      height: 5rem;
+      display: flex;
+
+      .vida {
+        width: 20%;
+        height: 100%;
+        background-image: url(../../../assets/img/coracao.png);
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+
+    .sair {
+      width: 15%;
+      height: 5rem;
+      // background-color: rgb(58, 33, 3);
+      display: flex;
+      justify-content: start;
+      align-items: center;
+
+      .button_sair {
+        background-color: #33146c;
+        padding: 0.5rem 2rem 0.5rem 2rem;
+        margin-left: 1rem;
+        transition: transform 0.5s;
+        cursor: pointer;
+
+        &:hover {
+          transform: scale(1.1);
+        }
+
+        p {
+          margin: 0;
+          font-size: 1.5rem;
+          color: #fff;
+          font-family: "DagestaN";
+        }
+      }
+    }
+  }
+}

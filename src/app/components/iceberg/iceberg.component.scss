@@ -1,20 +1,81 @@
+@keyframes vibrate {
+  0% {
+    transform: translate(0);
+  }
+  25% {
+    transform: translate(-5px, 5px);
+  }
+  50% {
+    transform: translate(5px, -5px);
+  }
+  75% {
+    transform: translate(-5px, -5px);
+  }
+  100% {
+    transform: translate(5px, 5px);
+  }
+}
+
+/* Adiciona a classe 'vibrate' a cada 10 segundos */
+@keyframes addClass {
+  0%,
+  100% {
+    transform: translate(0);
+  }
+  5% {
+    transform: translate(5px, -5px);
+  }
+  10% {
+    transform: translate(0);
+  }
+}
+
 .corpo {
-  width: 959px;
-  height: 918px;
-  background-image: url(../../../assets/img/images-removebg-preview.png);
+  width: 100%;
+  height: 100%;
+  animation: vibrate 3s linear infinite;
+  width: 700px;
+  height: 700px;
+  background-image: url(../../../assets/img/ICEBERG.png);
   background-position: center;
   background-size: 100%;
+
+  &.iceberg-background_moderado {
+    background-image: url(../../../assets/img/ICEBERGEDIT_MODERADO.png);
+  }
+
+  &.iceberg-background_moderado_2 {
+    background-image: url(../../../assets/img/ICEBERGEDIT_MODERADO_2.png);
+  }
+
+  &.iceberg-background_dificil {
+    background-image: url(../../../assets/img/ICEBERGEDIT_DIFICIL.png);
+  }
+
+  &.iceberg-background_dificil_2 {
+    background-image: url(../../../assets/img/ICEBERGEDIT_DIFICIL_2.png);
+  }
+
+  .iceberg_main {
+    width: 700px;
+    height: 700px;
+    // background-color: #ff00004a;
+    display: grid;
+    justify-items: center;
+    padding-left: 0.7rem;
+  }
 }
 
 .linha {
-  height: 50px;
-  background-color: #ff00004a;
-  position: absolute;
+  // background-color: #00ff404a;
+  // position: absolute;
   display: flex;
 
   .coluna {
+    width: 50%;
     height: 100%;
-    border: 1px solid white;
+    // border: 1px solid white;
+    cursor: pointer;
 
     .estouAqui {
       width: 100%;
@@ -23,6 +84,27 @@
       background-position: center;
       background-size: 27px;
       background-repeat: no-repeat;
+      transition: transform 0.5s;
+
+      &:hover {
+        // transform: scale(1.1);
+        transform: rotateY(360deg);
+      }
+    }
+
+    .estouBloqueado {
+      width: 100%;
+      height: 100%;
+      background-image: url(../../../assets/img/PONTO_BLOQUEADO.png);
+      background-position: center;
+      background-size: 27px;
+      background-repeat: no-repeat;
+      transition: transform 0.2s;
+
+      &:hover {
+        transform: scale(1.1);
+        // transform: rotateY(360deg);
+      }
     }
   }
 }

@@ -1,10 +1,43 @@
-<div class="corpo">
-  <div class="esquerda">
-    <app-timer></app-timer>
+<app-loading-screen *ngIf="loading"></app-loading-screen>
+
+<div *ngIf="!loading">
+  <!-- <div class="trovoada">
+    <div class="relampago"></div>
+  </div> -->
+
+  <video autoplay muted loop id="videoFundo">
+    <source
+      src="../../../assets/img/videoBackgroundGame.mp4"
+      type="video/mp4"
+    />
+    Seu navegador não suporta vídeo HTML5.
+  </video>
+
+  <video style="z-index: 9;" *ngIf="win" autoplay muted loop id="videoFundo">
+    <source src="../../../assets/img/kuduario.mp4" type="video/mp4" />
+    Seu navegador não suporta vídeo HTML5.
+  </video>
+
+  <div class="backgroundTransicao" *ngIf="emTransicao">
+    <app-background-transicao></app-background-transicao>
   </div>
-  <div class="direita">
-    <app-iceberg></app-iceberg>
+
+  <div class="backgroundAcessoNegado" *ngIf="acessoNegado"></div>
+
+  <div class="gameOver" *ngIf="vidas == 0"></div>
+
+  <div class="corpo">
+    <app-infos-jogador [vidas]="vidas" [pontuacao]="pontuacao"></app-infos-jogador>
+    <div class="esquerda">
+      <app-timer></app-timer>
+      <app-modal-perguntas
+        style="z-index: 1"
+        (exportNivel)="alteraNivel($event)"
+        (errouPergunta)="errouAPergunta($event)"
+      ></app-modal-perguntas>
+    </div>
+    <div class="direita">
+      <app-iceberg [nivel]="nivel"></app-iceberg>
+    </div>
   </div>
 </div>
-
-
